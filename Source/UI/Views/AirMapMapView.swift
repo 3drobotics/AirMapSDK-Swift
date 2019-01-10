@@ -132,13 +132,13 @@ extension AirMapMapView {
 
 	private func setupAccessToken() {
 		
-		guard MGLAccountManager.accessToken() == nil else { return }
+        guard MGLAccountManager.accessToken == nil else { return }
 		
 		guard let token = AirMap.configuration.mapboxAccessToken else {
 			fatalError("A Mapbox access token is required to use the AirMap SDK UI map component. " +
 				"https://www.mapbox.com/help/define-access-token/")
 		}
-		MGLAccountManager.setAccessToken(token)
+        MGLAccountManager.accessToken = token
 	}
 	
 	private func setupBindings() {
@@ -256,7 +256,7 @@ extension AirMapMapView {
 			.map { $0.tileSourceIdentifier }
 		
 		let existingSourceIds = style.sources
-			.compactMap { $0 as? MGLVectorSource }
+			.compactMap { $0 as? MGLVectorTileSource }
 			.compactMap { $0.identifier }
 			.filter { $0.hasPrefix(Constants.Maps.rulesetSourcePrefix) }
 		
@@ -297,7 +297,7 @@ extension AirMapMapView {
 		
 		guard style.source(withIdentifier: ruleset.tileSourceIdentifier) == nil else { return }
 		
-		let rulesetTileSource = MGLVectorSource(ruleset: ruleset)
+		let rulesetTileSource = MGLVectorTileSource(ruleset: ruleset)
 		style.addSource(rulesetTileSource)
 
 		style.airMapBaseStyleLayers(for: ruleset.airspaceTypes)

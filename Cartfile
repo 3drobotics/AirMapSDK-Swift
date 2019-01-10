@@ -11,7 +11,7 @@ github "delba/Log"
 # AirMapUI
 github "RxSwiftCommunity/RxDataSources" ~> 3.0
 github "marmelroy/PhoneNumberKit"
-binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" ~> 3.7
+binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" ~> 4.3
 github "auth0/Lock.swift" ~> 2.4
 
 # AirMapTraffic

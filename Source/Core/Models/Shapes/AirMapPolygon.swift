@@ -8,43 +8,43 @@
 
 import Foundation
 public class AirMapPolygon: AirMapGeometry {
-	
-	public var coordinates: [[Coordinate2D]]!
-	
-	public var type: AirMapFlightGeometryType {
-		return .polygon
-	}
-	
-	public init(coordinates: [[Coordinate2D]]) {
-		self.coordinates = coordinates
-	}
-	
-	public func params() -> [String: Any] {
-		
-		var params = [String: Any]()
-		
-		if (coordinates?.count ?? 0) >= 1 {
-			
-			let coordinates = self.coordinates.map { (coordinates) -> [Coordinate2D] in
-				coordinates.reduce([Coordinate2D]()) { (result, next) -> [Coordinate2D] in
-					var result = result
-					if result.last != next {
-						result.append(next)
-					}
-					return result
-				}
-			}
-			
-			params["type"] = "Polygon"
-			params["coordinates"] = coordinates
-				.map { coordinates in
-					return coordinates.map { coordinate in
-						[coordinate.longitude, coordinate.latitude]
-					}
-				} as [[[Double]]] as AnyObject?
-		}
-		
-		return params
-	}
+
+    public var coordinates: [[Coordinate2D]]
+    
+    public var type: AirMapFlightGeometryType {
+        return .polygon
+    }
+    
+    public init(coordinates: [[Coordinate2D]]) {
+        self.coordinates = coordinates
+    }
+    
+    public func params() -> [String: Any] {
+        
+        var params = [String: Any]()
+        
+        if coordinates.count >= 1 {
+            
+            let coordinates = self.coordinates.map { (coordinates) -> [Coordinate2D] in
+                coordinates.reduce([Coordinate2D]()) { (result, next) -> [Coordinate2D] in
+                    var result = result
+                    if result.last != next {
+                        result.append(next)
+                    }
+                    return result
+                }
+            }
+            
+            params["type"] = "Polygon"
+            params["coordinates"] = coordinates
+                .map { coordinates in
+                    return coordinates.map { coordinate in
+                        [coordinate.longitude, coordinate.latitude]
+                    }
+                } as [[[Double]]] as AnyObject?
+        }
+        
+        return params
+    }
 }
 
