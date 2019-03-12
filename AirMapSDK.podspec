@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 	s.name              = 'AirMapSDK'
 	s.module_name       = 'AirMap'
 	s.author            = 'AirMap, Inc.'
-	s.version           = '2.1.0'
+	s.version           = '3.0.0.beta.1'
 	s.summary           = 'AirMap SDK for iOS & macOS'
 	s.description       = 'Create Flights, Send Telemetry Data, Get Realtime Traffic Alerts.'
 	s.license           = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -31,8 +31,7 @@ Pod::Spec.new do |s|
 		core.dependency 'Alamofire'
 		core.dependency 'ObjectMapper'
 		core.dependency 'SwiftTurf'
-		core.dependency 'SimpleKeychain'
-		core.dependency 'JWTDecode'
+		core.dependency 'KeychainAccess'
 		core.dependency 'RxSwift'
 		core.dependency 'RxSwiftExt'
 		core.dependency 'RxCocoa'

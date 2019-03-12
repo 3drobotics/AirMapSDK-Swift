@@ -37,7 +37,9 @@ class AirMapVerifySMSCodeViewController: UITableViewController, AnalyticsTrackab
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		setupBindings()
+		setupBranding()
 		smsCode.becomeFirstResponder()
 	}
 	
@@ -60,7 +62,7 @@ class AirMapVerifySMSCodeViewController: UITableViewController, AnalyticsTrackab
 	fileprivate func setupBindings() {
 		
 		smsTextField.rx.text.asObservable()
-			.map { $0?.count == Constants.AirMapApi.smsCodeLength }
+			.map { $0?.count == Constants.Api.smsCodeLength }
 			.bind(to: submitButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 		
@@ -71,6 +73,10 @@ class AirMapVerifySMSCodeViewController: UITableViewController, AnalyticsTrackab
 			.disposed(by: disposeBag)
 	}
 	
+	fileprivate func setupBranding() {
+		submitButton.backgroundColor = .primary
+	}
+
 	@IBAction func submitSMSCode() {
 		
 		trackEvent(.tap, label: "Submit Button")
