@@ -20,6 +20,7 @@
 
 import Foundation
 import RxSwift
+import UIKit
 
 // Reactive extension for AirMap methods.
 extension AirMap: ReactiveCompatible {}

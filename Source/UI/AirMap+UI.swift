@@ -19,6 +19,7 @@
 //
 
 import RxSwift
+import UIKit
 
 extension AirMap {
 	
