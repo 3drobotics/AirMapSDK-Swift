@@ -18,9 +18,6 @@
 //  limitations under the License.
 //
 
-#if !COCOAPODS
-import AirMapInternal
-#endif
 
 import CoreLocation
 
