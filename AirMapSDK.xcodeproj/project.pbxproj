@@ -142,7 +142,6 @@
 		91532EFC20040DA300A45481 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EEF20040DA300A45481 /* Alamofire.framework */; };
 		91532EFE20040DA300A45481 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF120040DA300A45481 /* ObjectMapper.framework */; };
 		91532EFF20040DA300A45481 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF220040DA300A45481 /* RxCocoa.framework */; };
-		91532F0020040DA300A45481 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF320040DA300A45481 /* JWTDecode.framework */; };
 		91532F0120040DA300A45481 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF420040DA300A45481 /* RxSwiftExt.framework */; };
 		91532F0320040DA300A45481 /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF620040DA300A45481 /* SimpleKeychain.framework */; };
 		91532F0420040DA300A45481 /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91532EF720040DA300A45481 /* Log.framework */; };
@@ -312,7 +311,6 @@
 		91532EF020040DA300A45481 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		91532EF120040DA300A45481 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		91532EF220040DA300A45481 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		91532EF320040DA300A45481 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		91532EF420040DA300A45481 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		91532EF520040DA300A45481 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		91532EF620040DA300A45481 /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/iOS/SimpleKeychain.framework; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 				9101AF9420DA6E8000376C1A /* CocoaAsyncSocket.framework in Frameworks */,
 				9101AF8B20DA6DEB00376C1A /* CryptoSwift.framework in Frameworks */,
 				9101AF8D20DA6DF300376C1A /* Differentiator.framework in Frameworks */,
-				91532F0020040DA300A45481 /* JWTDecode.framework in Frameworks */,
 				9101AF8F20DA6DFE00376C1A /* Lock.framework in Frameworks */,
 				91532F0420040DA300A45481 /* Log.framework in Frameworks */,
 				9101AF9520DA6E8A00376C1A /* Mapbox.framework in Frameworks */,
@@ -749,7 +746,6 @@
 				91532EF920040DA300A45481 /* CocoaAsyncSocket.framework */,
 				9101AF8A20DA6DEB00376C1A /* CryptoSwift.framework */,
 				9101AF8C20DA6DF300376C1A /* Differentiator.framework */,
-				91532EF320040DA300A45481 /* JWTDecode.framework */,
 				9101AF8E20DA6DFE00376C1A /* Lock.framework */,
 				91532EF720040DA300A45481 /* Log.framework */,
 				913C3B6A200436B900BCF16F /* Mapbox.framework */,
