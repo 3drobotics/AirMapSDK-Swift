@@ -2,13 +2,13 @@
 github "AirMap/SwiftTurf" ~> 0.3
 github "Alamofire/Alamofire" ~> 4.5
 github "Hearst-DD/ObjectMapper" ~> 3.1
-github "ReactiveX/RxSwift" ~> 4.0
-github "RxSwiftCommunity/RxSwiftExt"
-github "delba/Log"
+github "ReactiveX/RxSwift" == 5.0.1
+github "RxSwiftCommunity/RxSwiftExt" == 5.0.0
+github "3drobotics/Log" "swift5"
 
 
 # AirMapUI
-github "RxSwiftCommunity/RxDataSources" ~> 3.0
+github "RxSwiftCommunity/RxDataSources" "06b7b21eb41f61b1909adb1ac48e7b015e9ecc86"
 github "marmelroy/PhoneNumberKit"
 binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" ~> 4.3
 github "auth0/Lock.swift" ~> 2.4
