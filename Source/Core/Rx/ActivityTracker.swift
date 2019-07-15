@@ -37,7 +37,9 @@ If there is at least one sequence computation in progress, `true` will be sent.
 When all activities complete `false` will be sent.
 */
 open class ActivityTracker : SharedSequenceConvertibleType {
-	public typealias E = Bool
+    
+    public typealias Element = Bool
+    
 	public typealias SharingStrategy = DriverSharingStrategy
 	
 	fileprivate let _lock = NSRecursiveLock()
@@ -50,7 +52,7 @@ open class ActivityTracker : SharedSequenceConvertibleType {
 			.distinctUntilChanged()
 	}
 	
-	fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
+	fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.Element> {
 		return Observable.using({ () -> ActivityToken<O.E> in
 			self.increment()
 			return ActivityToken(source: source.asObservable(), disposeAction: self.decrement)
@@ -71,7 +73,7 @@ open class ActivityTracker : SharedSequenceConvertibleType {
 		_lock.unlock()
 	}
 	
-	open func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
+	open func asSharedSequence() -> SharedSequence<DriverSharingStrategy, ActivityTracker.Element> {
 		return _loading
 	}
 }
